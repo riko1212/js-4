@@ -11,7 +11,7 @@ flatpickr('input#datetime-picker', {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0].getTime() < Date.now()) {
-      alert('wrong');
+      Notiflix.Notify.success('Please choose a date in the future');
     } else {
       btnStart.disabled = false;
       const setTimer = () => {
